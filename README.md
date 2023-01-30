@@ -38,11 +38,11 @@ Using a Virtual Terminal you use: "/ecr/v1/transactions:sale" to post:
   "preauth": false,
   "maxInstalments": 0,
   "tipAmount": 0,
-  __"terminalIP: 192.168.0.253__,
-  __"terminalPORT: 8080__
+  "terminalIP: 192.168.0.253,
+  "terminalPORT: 8080
 }
 ```
-Extra to the json: -> terminalIP and  terminalPORT.
+Extra to the json: -> **terminalIP** and  **terminalPORT**.
   
 The Relay Server will catch the request from the API, once received the source API need to flag the request as handled.
 
