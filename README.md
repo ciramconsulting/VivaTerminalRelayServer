@@ -18,7 +18,9 @@ Concept of the Relay Server
 ### How it works
 
 The Relay Server will connect to a custom API connector, the API connector will then convert it to the same JSON that is used for Virutal Terminals POS.
-We do this to be uniform with the documentation from VivaWallet.
+We do this to be uniform with the documentation from VivaWallet. If the API provide a direct Socket string, the Relay server does not need to convert it.
+
+
 ```
 https://developer.vivawallet.com/apis-for-point-of-sale/card-terminals-devices/rest-api/eft-pos-api-documentation/#tag/Transactions/paths/~1ecr~1v1~1transactions:sale/post
 ```
@@ -35,12 +37,27 @@ Using a Virtual Terminal you use: "/ecr/v1/transactions:sale" to post:
   "customerTrns": "some-reference",
   "preauth": false,
   "maxInstalments": 0,
-  "tipAmount": 0
+  "tipAmount": 0,
+  "terminalIP: 192.168.0.253,
+  "terminalPORT: 8080
 }
 ```
+Extra to the json: -> terminalIP and  terminalPORT.
+  
 The Relay Server will catch the request from the API, once received the source API need to flag the request as handled.
 
-The Relay Server will convert to JSON into a Socket Instruction string
+The Relay Server will convert to JSON into a Socket Instruction string or use the direct socket string from the API.
 
 
+```
+https://developer.vivawallet.com/apis-for-point-of-sale/card-terminals-devices/vivawallet-api-cl/sale/#txsalerequest
+```
+
+A message will be created or direcly used like:
+
+```
+0107|821879|200|00|608961A490C26CD5570E217190785AEB|1|0000|||||0.10||||ecr_default
+```
+
+If you use the Message Direclty you need to map TerminalID to a specific IP, if you use the JSON it will automaticly convert it to string socket message and connect to the correct Terminal.
 
