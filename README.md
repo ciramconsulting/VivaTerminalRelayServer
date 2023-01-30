@@ -38,8 +38,8 @@ Using a Virtual Terminal you use: "/ecr/v1/transactions:sale" to post:
   "preauth": false,
   "maxInstalments": 0,
   "tipAmount": 0,
-  "terminalIP: 192.168.0.253,
-  "terminalPORT: 8080
+  **"terminalIP: 192.168.0.253**,
+  **"terminalPORT: 8080**
 }
 ```
 Extra to the json: -> terminalIP and  terminalPORT.
