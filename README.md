@@ -59,5 +59,5 @@ A message will be created or direcly used like:
 0107|821879|200|00|608961A490C26CD5570E217190785AEB|1|0000|||||0.10||||ecr_default
 ```
 
-If you use the Message Direclty you need to map TerminalID to a specific IP, if you use the JSON it will automaticly convert it to string socket message and connect to the correct Terminal.
+If you use the Message Directly you need to map TerminalID to a specific IP, if you use the JSON it will automaticly convert it to string socket message and connect to the correct Terminal.
 
