@@ -9,7 +9,7 @@ Custom API connector(s) can be created and added to the Relay Server to receive 
 
 The Relay server can be installed on a local computer and can be used on Linux, Apple, Windows etc... IOT devices like OrangePI, Raspberry PI, etc...
 
-A webhook wil be used to receive the payment is succesfull.
+A webhook wil be used to receive the payment, if the payment is succesfull.
 
 Concept of the Relay Server
 
